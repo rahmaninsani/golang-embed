@@ -1,4 +1,4 @@
-package golang_embed
+package test
 
 import (
 	"embed"
@@ -23,7 +23,7 @@ func TestString(t *testing.T) {
 //go:embed logo.png
 var logo []byte
 
-func TestByteArray(t *testing.T) {
+func TestByte(t *testing.T) {
 	//err := ioutil.WriteFile("logo_new.png", logo, fs.ModePerm) // deprecated
 	err := os.WriteFile("logo_new.png", logo, fs.ModePerm)
 	if err != nil {
